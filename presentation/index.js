@@ -12,9 +12,9 @@ import {
     Heading,
     // Image,
     // Layout,
-    // Link,
-    // ListItem,
-    // List,
+    Link,
+    ListItem,
+    List,
     // Markdown,
     // Quote,
     Slide,
@@ -57,6 +57,33 @@ export default class Presentation extends React.Component {
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
                             GLSL Syntax
+                        </Heading>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
+                            Resources
+                        </Heading>
+                        <List>
+                            <ListItem>
+                                <Link href="https://github.com/YashdalfTheGray/glsl-presentation/blob/master/presentation/outline.md">
+                                    <Text textColor="secondary">Presentation Outline</Text>
+                                </Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://www.opengl.org/documentation/glsl/">
+                                    <Text textColor="secondary">OpenGL Shader Language Home</Text>
+                                </Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://www.opengl.org/sdk/docs/man/">
+                                    <Text textColor="secondary">GLSL Documentation</Text>
+                                </Link>
+                            </ListItem>
+                        </List>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
+                            That's it folks!
                         </Heading>
                     </Slide>
                 </Deck>
