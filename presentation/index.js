@@ -79,6 +79,11 @@ export default class Presentation extends React.Component {
                                     <Text textColor="secondary">GLSL Documentation</Text>
                                 </Link>
                             </ListItem>
+                            <ListItem>
+                                <Link href="https://formidable.com/open-source/spectacle/">
+                                    <Text textColor="secondary">Spectacle by FormidableLabs</Text>
+                                </Link>
+                            </ListItem>
                         </List>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
