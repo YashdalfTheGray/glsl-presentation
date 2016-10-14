@@ -1,5 +1,5 @@
 // Import React
-import React from "react";
+import React from 'react';
 
 // Import Spectacle Core tags
 import {
@@ -20,17 +20,17 @@ import {
     Slide,
     Spectacle,
     Text
-} from "spectacle";
+} from 'spectacle';
 
 // Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
+import preloader from 'spectacle/lib/utils/preloader';
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
 
 // Require CSS
-require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
+require('normalize.css');
+require('spectacle/lib/themes/default/index.css');
 
 
 const images = {};
@@ -38,21 +38,26 @@ const images = {};
 preloader(images);
 
 const theme = createTheme({
-    primary: "#5381ac"
+    primary: '#5381ac'
 });
 
 export default class Presentation extends React.Component {
     render() {
         return (
             <Spectacle theme={theme}>
-                <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-                    <Slide transition={["zoom"]} bgColor="primary">
+                <Deck transition={['zoom', 'slide']} transitionDuration={500}>
+                    <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} fit caps lineHeight={1} textColor="black">
                             OpenGL Shader Language
                         </Heading>
                         <Text textSize="1.5em" margin="20px 0px 0px" bold>
                             Yash Kulshrestha @yashdalfthegray
                         </Text>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
+                            GLSL Syntax
+                        </Heading>
                     </Slide>
                 </Deck>
             </Spectacle>
