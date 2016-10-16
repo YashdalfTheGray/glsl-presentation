@@ -6,7 +6,7 @@ import {
     // Appear,
     // BlockQuote,
     // Cite,
-    // CodePane,
+    CodePane,
     Deck,
     // Fill,
     Heading,
@@ -58,6 +58,7 @@ export default class Presentation extends React.Component {
                         <Heading size={1} lineHeight={1} textColor="black">
                             GLSL Syntax
                         </Heading>
+                        <CodePane lang="glsl" source={require('raw!../assets/syntax.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
@@ -71,11 +72,13 @@ export default class Presentation extends React.Component {
                         <Heading size={1} lineHeight={1} fit textColor="black">
                             Function parameter modifiers
                         </Heading>
+                        <CodePane lang="glsl" source={require('raw!../assets/parameter-modifiers.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
-                        <Heading size={1} lineHeight={1} fit textColor="black">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             Vectors
                         </Heading>
+                        <CodePane lang="glsl" source={require('raw!../assets/vectors.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">

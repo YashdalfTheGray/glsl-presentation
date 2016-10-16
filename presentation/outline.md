@@ -32,7 +32,7 @@ Most of the GLSL syntax looks familiar to C++ or javascript syntax except for a 
 * GLSL loves syntactic sugar when it comes to vectors
 
     ```
-a = vec4(1, 2, 3, 4);
+vec4 a(1, 2, 3, 4);
 a.x == a.r == a.s == a[0];
 a.y == a.g == a.t == a[1];
 a.z == a.b == a.u == a[2];
@@ -42,7 +42,7 @@ a.w == a.a == a.v == a[3];
 * GLSL also has accessors for pieces of vectors
 
     ```
-a = vec4(1, 2, 3, 4);
+vec4 a(1, 2, 3, 4);
 b = a.yz; // b = vec2(2, 3)
 c = a.tuv; // c = vec3(2, 3, 4)
 d = a.rrgg; // d = vec4(1, 1, 2, 2)
