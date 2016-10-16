@@ -23,4 +23,29 @@ Most of the GLSL syntax looks familiar to C++ or javascript syntax except for a 
 * The `out` keyword can be used to pass in an uninitialized value and pass a value out.
 * The `in` keyword passes the parameter by value.
 * The `inout` keyword passes the parameter by reference.
-* The `const` keyword passes the parameter as a constant. 
+* The `const` keyword passes the parameter as a constant.
+
+## Vectors
+
+* Vectors are a very important part of any graphics framework and so is the case with GLSL.
+* Vectors can be either in 2, 3 or 4 dimension flavors and can be created out of `int`, `bool` and `float`.
+* GLSL loves syntactic sugar when it comes to vectors
+
+    ```
+a = vec4(1, 2, 3, 4);
+a.x == a.r == a.s == a[0];
+a.y == a.g == a.t == a[1];
+a.z == a.b == a.u == a[2];
+a.w == a.a == a.v == a[3];
+    ```
+
+* GLSL also has accessors for pieces of vectors
+
+    ```
+a = vec4(1, 2, 3, 4);
+b = a.yz; // b = vec2(2, 3)
+c = a.tuv; // c = vec3(2, 3, 4)
+d = a.rrgg; // d = vec4(1, 1, 2, 2)
+    ```
+
+* All standard math operations are available for vectors in addition to `length`, `distance`, `normalize`, `cross` and `dot`.
