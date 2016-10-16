@@ -72,3 +72,34 @@ vec3 c3 = vec3(6, 7, 8);
 
 mat3 c = mat3(c1, c2, c3);
 ```
+
+## Fragment Shaders
+
+* A GLSL fragment is a piece of a pixel. Usually the mapping is 1:1 but with Anti-aliasing, this could be different.
+* You can write a fragment file to tell GLSL what do render on your screen.
+* Every fragment file contains a `main()` method that takes no parameters and returns no value.
+* The variable `gl_FragCoord` can be used to determine what fragment GLSL is processing right now.
+* The variable `gl_FragColor` can be used to set a specific color for that fragment.
+* The `discard` keyword can be used to prevent anything from being written to the buffer for that particular fragment.
+* `uniform` variables can be passed from the application down to the fragment. This can include small values like changing screen sizes or large textures which are stored in a sampler variable (`sampler2D` for a 2D texture).
+* To look up the value of a texture at any point, use the `texture2D` function.
+
+```
+// filename: fragment.glsl
+// shows an image masked by a 128 unit radius circle centered at 256, 256.
+
+#define COLOR_BLACK vec4(0.0, 0.0, 0.0, 1.0);
+
+uniform sampler2D image;
+
+void main() {
+    vec2 origin = vec2(256, 256);
+
+    if (distance(origin, gl_FragCoord.xy) <= 128.0) {
+        gl_FragColor = texture2D(image, gl_FragCoord.xy);
+    }
+    else {
+        gl_FragColor = COLOR_BLACK;
+    }
+}
+```
