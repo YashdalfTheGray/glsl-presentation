@@ -82,6 +82,12 @@ export default class Presentation extends React.Component {
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
+                            Matrices
+                        </Heading>
+                        <CodePane lang="glsl" source={require('raw!../assets/matrices.glsl')} margin="20px auto"/>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             Resources
                         </Heading>
                         <List>

@@ -16,6 +16,7 @@ Most of the GLSL syntax looks familiar to C++ or javascript syntax except for a 
 * You can specify range and precision for `float` types, `lowp`, `mediump` and `highp`.
 * A lot of math functions are built into the language to help with scalar manipulations.
 * You can set the precision globally for all `float`s by using the `precision` keyword.
+* GLSL has conditionals and loops just like any other language but conditionals are very expensive so use them sparingly.
 
 ## Function Parameters Modifiers
 
@@ -49,3 +50,25 @@ d = a.rrgg; // d = vec4(1, 1, 2, 2)
     ```
 
 * All standard math operations are available for vectors in addition to `length`, `distance`, `normalize`, `cross` and `dot`.
+
+## Matrices
+
+* GLSL also supports 2x2, 3x3 and 4x4 floating point matrices.
+* Matrices are organized in column-major order which is different than 2-dimensional arrays in other languages
+* Component-wise addition is supported as well as multiplication by a scalar.
+* The `*` operator does matrix multiplication in the linear algebra sense.
+* Use `matrixCompMult` to do Component-wise multiplication.
+
+```
+mat2 a = mat2(1.0, 0.0,
+              0.0, 1.0);
+
+mat2 b = mat2(1.0); // constructs a 2x2 identity matrix
+
+// constructing a 3x3 matrix by specifying columns
+vec3 c1 = vec3(0, 1, 2);
+vec3 c2 = vec3(3, 4, 5);
+vec3 c3 = vec3(6, 7, 8);
+
+mat3 c = mat3(c1, c2, c3);
+```
