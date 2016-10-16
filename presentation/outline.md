@@ -6,6 +6,15 @@ Yash Kulshrestha ([@yashdalfthegray](https://twitter.com/YashdalfTheGray))
 
 [Github](https://github.com/YashdalfTheGray)
 
+## Introduction
+
+* The OpenGL Shader Language is a high-level shading language that can run on multiple platforms.
+* Any kind of viewport is basically represented by a 2D buffer with each element being a color.
+* OpenGL iterates over each of those elements and lets you set the color that you want (at a high level).
+* OpenGL does this through putting an initial viewport through a collection of matrix transformations.
+* The display buffer is then picked up by the rendering engine and displayed on the screen. 
+* And that's how graphics work (again, at a high level).
+
 ## General Syntax
 
 Most of the GLSL syntax looks familiar to C++ or javascript syntax except for a few things -

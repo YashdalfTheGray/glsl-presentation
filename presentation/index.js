@@ -56,6 +56,14 @@ export default class Presentation extends React.Component {
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
+                            Introduction
+                        </Heading>
+                        <Text textSize="1.5em" margin="20px 0px 0px" bold>
+                            It's all about viewports, buffers and math!
+                        </Text>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             GLSL Syntax
                         </Heading>
                         <CodePane lang="glsl" source={require('raw!../assets/syntax.glsl')} margin="20px auto"/>
