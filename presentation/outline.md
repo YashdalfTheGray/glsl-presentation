@@ -12,7 +12,7 @@ Yash Kulshrestha ([@yashdalfthegray](https://twitter.com/YashdalfTheGray))
 * Any kind of viewport is basically represented by a 2D buffer with each element being a color.
 * OpenGL iterates over each of those elements and lets you set the color that you want (at a high level).
 * OpenGL does this through putting an initial viewport through a collection of matrix transformations.
-* The display buffer is then picked up by the rendering engine and displayed on the screen. 
+* The display buffer is then picked up by the rendering engine and displayed on the screen.
 * And that's how graphics work (again, at a high level).
 
 ## General Syntax
@@ -110,5 +110,37 @@ void main() {
     else {
         gl_FragColor = COLOR_BLACK;
     }
+}
+```
+## Vertex Shaders
+
+* A vertex is just a point on the screen.
+* A vertex shader is written just like a fragment shader with a `main()` that takes no parameters and returns no values.
+* The `gl_Position` variable in a vertex shader represents the location of the vertex.
+* In addition to having `uniform` variables like fragment shaders, vertex shaders also have `attribute` and `varying` variables.
+* `attribute` variables are per-vertex information that a vertex shader can accept.
+* `varying` variables (sounds silly) are variables are that will need to be linearly interpolated between vertices.
+* `varying` variables are also the connection between fragment shaders and vertex shaders and can be used to pass information directly.
+
+```
+filename: fragment.glsl
+
+varying vec3 fragmentColor;
+
+void main() {
+    gl_FragColor = vec4(fragmentColor, 1.0);
+}
+```
+
+```
+filename: vertex.glsl
+
+attribute vec4 position;
+attribute vec4 color;
+varying vec3 fragmentColor;
+
+void main() {
+    gl_Position = position;
+    fragmentColor = color;
 }
 ```

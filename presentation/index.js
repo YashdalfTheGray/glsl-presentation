@@ -102,6 +102,12 @@ export default class Presentation extends React.Component {
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
+                            Vertex Shaders
+                        </Heading>
+                        <CodePane lang="glsl" source={require('raw!../assets/vertex-shaders.glsl')} margin="20px auto"/>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             Resources
                         </Heading>
                         <List>
@@ -128,9 +134,10 @@ export default class Presentation extends React.Component {
                         </List>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
-                        <Heading size={1} lineHeight={1} textColor="black">
-                            That's it folks!
-                        </Heading>
+                        <CodePane source={"npm install -g shader-school"} textSize="36px"/>
+                            <Text textSize=".8em" margin="20px 0px 0px" bold>
+                                ...and thanks for listening!
+                            </Text>
                     </Slide>
                 </Deck>
             </Spectacle>
