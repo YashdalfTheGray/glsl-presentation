@@ -135,6 +135,11 @@ export default class Presentation extends React.Component {
                                 </Link>
                             </ListItem>
                             <ListItem>
+                                <Link href="https://en.wikipedia.org/wiki/Transformation_matrix">
+                                    <Text textColor="secondary">GLSL Matrix Transforms</Text>
+                                </Link>
+                            </ListItem>
+                            <ListItem>
                                 <Link href="https://formidable.com/open-source/spectacle/">
                                     <Text textColor="secondary">Spectacle by FormidableLabs</Text>
                                 </Link>
