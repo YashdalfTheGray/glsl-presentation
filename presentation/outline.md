@@ -152,7 +152,7 @@ void main() {
 * The standard hyperplane that WebGL uses is the one at w = 1.
 * Using the standard w = 1 hyperplane, we can map lines through the origin to points on the cartesian plane.
 * This makes translations, rotations, scales and reflections linear operations which can then be represented by `mat4`.
-* This is also how OpenGL does clipping, occlusion and rendering for 3D content on a 2D screen. 
+* This is also how OpenGL does clipping, occlusion and rendering for 3D content on a 2D screen.
 
 ```
 vec4 performSomeTransform(vec4 v) {
@@ -160,3 +160,12 @@ vec4 performSomeTransform(vec4 v) {
 
     return mat4 * v;
 }
+```
+
+## Lighting
+
+* Lighting a graphical asset usually requires a few considerations.
+* The first one that most poeple consider is the ambient light available to all of the things in the world.
+* The next one that is considered is diffuse lighting. This makes the material look matte, like paper.
+* To make a material look like metal or polished plastic, you can use phong shading which takes into account where the light is coming from and where the camera is.
+* The phong shading model can be extended to have point lights in the scene and even multiple point lights.
