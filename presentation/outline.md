@@ -8,6 +8,8 @@ Yash Kulshrestha ([@yashdalfthegray](https://twitter.com/YashdalfTheGray))
 
 ## Introduction
 
+* OpenGL or Open Graphics Library is a cross-platform, cross-language API for generating performant 2D and 3D graphics.
+* It is used by most Linux distros, Android, iOS and macOS. 
 * The OpenGL Shader Language is a high-level shading language that can run on multiple platforms.
 * Any kind of viewport is basically represented by a 2D buffer with each element being a color.
 * OpenGL iterates over each of those elements and lets you set the color that you want (at a high level).
