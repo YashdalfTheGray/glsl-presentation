@@ -5,7 +5,9 @@ import React from 'react';
 import {
     CodePane,
     Deck,
+    Fill,
     Heading,
+    Layout,
     Link,
     ListItem,
     List,
@@ -58,7 +60,14 @@ export default class Presentation extends React.Component {
                         <Heading size={1} lineHeight={1} textColor="black">
                             GLSL Syntax
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/syntax.glsl')} margin="20px auto"/>
+                        <Layout>
+                            <Fill>
+                                <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/syntax-pt1.glsl')} margin="20px auto"/>
+                            </Fill>
+                            <Fill>
+                                <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/syntax-pt2.glsl')} margin="20px auto"/>
+                            </Fill>
+                        </Layout>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
@@ -72,31 +81,38 @@ export default class Presentation extends React.Component {
                         <Heading size={1} lineHeight={1} fit textColor="black">
                             Function parameter modifiers
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/parameter-modifiers.glsl')} margin="20px auto"/>
+                        <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/parameter-modifiers.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
                             Vectors
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/vectors.glsl')} margin="20px auto"/>
+                        <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/vectors.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
                             Matrices
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/matrices.glsl')} margin="20px auto"/>
+                        <Layout>
+                            <Fill>
+                                <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/matrices-pt1.glsl')} margin="20px auto"/>
+                            </Fill>
+                            <Fill>
+                                <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/matrices-pt2.glsl')} margin="20px auto"/>
+                            </Fill>
+                        </Layout>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
                             Fragment Shaders
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/fragment-shaders.glsl')} margin="20px auto"/>
+                        <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/fragment-shaders.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
                             Vertex Shaders
                         </Heading>
-                        <CodePane lang="glsl" source={require('raw!../assets/vertex-shaders.glsl')} margin="20px auto"/>
+                        <CodePane textSize="22px" lang="glsl" source={require('raw!../assets/vertex-shaders.glsl')} margin="20px auto"/>
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
