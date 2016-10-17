@@ -116,6 +116,14 @@ export default class Presentation extends React.Component {
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
+                            Lighting
+                        </Heading>
+                        <Text textSize="1em" margin="20px 0px 0px" bold>
+                            Ambient, diffuse, phong shading and point lights.
+                        </Text>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             Resources
                         </Heading>
                         <List>
@@ -136,7 +144,7 @@ export default class Presentation extends React.Component {
                             </ListItem>
                             <ListItem>
                                 <Link href="https://en.wikipedia.org/wiki/Transformation_matrix">
-                                    <Text textColor="secondary">GLSL Matrix Transforms</Text>
+                                    <Text textColor="secondary">Matrix Transforms</Text>
                                 </Link>
                             </ListItem>
                             <ListItem>
