@@ -3,20 +3,12 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-    // Appear,
-    // BlockQuote,
-    // Cite,
     CodePane,
     Deck,
-    // Fill,
     Heading,
-    // Image,
-    // Layout,
     Link,
     ListItem,
     List,
-    // Markdown,
-    // Quote,
     Slide,
     Spectacle,
     Text
