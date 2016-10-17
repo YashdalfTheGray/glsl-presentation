@@ -169,3 +169,13 @@ vec4 performSomeTransform(vec4 v) {
 * The next one that is considered is diffuse lighting. This makes the material look matte, like paper.
 * To make a material look like metal or polished plastic, you can use phong shading which takes into account where the light is coming from and where the camera is.
 * The phong shading model can be extended to have point lights in the scene and even multiple point lights.
+
+## Primitives
+
+OpenGL has two basic shapes that can be put together to construct more complex geometry. The point and the triangle. When rendering a point, you can use `gl_PointSize` to set the radius of the point and `gl_PointCoord` which can assign a location to the point.
+
+When rendering a triangle, you can use `gl_FrontFacing` to determine if a triangle is facing the camera or not. This can be useful for putting a front and a back color on a material.
+
+## 🤔 or 😵
+
+These are the basics of graphics rendering in general. There are a couple of other involved topics like GPGPU that the workshopper does a better job at covering in addition to providing more details on the topics covered here.

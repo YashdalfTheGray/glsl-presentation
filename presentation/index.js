@@ -124,6 +124,16 @@ export default class Presentation extends React.Component {
                     </Slide>
                     <Slide transition={['slide']} bgColor="primary">
                         <Heading size={1} lineHeight={1} textColor="black">
+                            😵
+                        </Heading>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
+                            🤔
+                        </Heading>
+                    </Slide>
+                    <Slide transition={['slide']} bgColor="primary">
+                        <Heading size={1} lineHeight={1} textColor="black">
                             Resources
                         </Heading>
                         <List>
