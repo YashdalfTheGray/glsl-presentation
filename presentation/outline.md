@@ -144,3 +144,19 @@ void main() {
     fragmentColor = color;
 }
 ```
+
+## Geometry
+
+* GLSL uses the concept of projective geometry to linearize all of the geometrical transforms.
+* Projective geometry maps points in a space to lines going through the origin in a space that is one dimension higher.
+* The standard hyperplane that WebGL uses is the one at w = 1.
+* Using the standard w = 1 hyperplane, we can map lines through the origin to points on the cartesian plane.
+* This makes translations, rotations, scales and reflections linear operations which can then be represented by `mat4`.
+* This is also how OpenGL does clipping, occlusion and rendering for 3D content on a 2D screen. 
+
+```
+vec4 performSomeTransform(vec4 v) {
+    mat4 someTransform = mat4(1.0);
+
+    return mat4 * v;
+}
